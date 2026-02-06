@@ -19,16 +19,20 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="../index.html" class="navbar-brand">BGD <span>Cars</span></a>
+            <a href="../index.html" class="navbar-brand">
+                <img src="../assets/img/logo.png" alt="BGD Cars Logo" style="height: 40px; width: auto;">
+                BGDCARS<span>Detailing</span>
+            </a>
             <div style="display: flex; align-items: center;">
                 <ul class="navbar-nav">
-                    <li><a href="../index.html">Početna</a></li>
-                    <li><a href="about.html">O Nama</a></li>
-                    <li><a href="services.html">Usluge</a></li>
-                    <li><a href="pricing.html">Cenovnik</a></li>
-                    <li><a href="gallery.html">Galerija</a></li>
-                    <li><a href="club.html">Auto Klub</a></li>
-                    <li><a href="contact.html" class="active">Kontakt</a></li>
+                    <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                    <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                    <li><a href="services.html" data-lang="nav_services">Usluge</a></li>
+                    <li><a href="pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                    <li><a href="gallery.html" data-lang="nav_gallery">Galerija</a></li>
+                    <li><a href="club.html" data-lang="nav_club">Auto Klub</a></li>
+                    <li><a href="blog.html" data-lang="nav_blog">Blog</a></li>
+                    <li><a href="contact.html" class="active" data-lang="nav_contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-socials">
                     <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -37,6 +41,23 @@
                             class="fab fa-tiktok social-icon"></i></a>
                     <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
                             class="fab fa-youtube social-icon"></i></a>
+                </div>
+                <!-- Language Switcher (Dropdown) -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn">
+                        <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-menu" style="min-width: auto; padding: 0.5rem;">
+                        <a href="#" class="lang-item active" data-lang-select="sr"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        </a>
+                        <a href="#" class="lang-item" data-lang-select="en"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="lang-flag">
+                        </a>
+                    </div>
                 </div>
             </div>
             <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -47,8 +68,8 @@
 
     <section class="page-header">
         <div class="container">
-            <h1><span class="text-primary">Kontakt</span></h1>
-            <p>Javite nam se i zakažite termin</p>
+            <h1><span class="text-primary" data-lang="contact_title">Kontakt</span></h1>
+            <p data-lang="contact_subtitle">Javite nam se i zakažite termin</p>
         </div>
     </section>
 
@@ -56,58 +77,62 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-form">
-                    <h3 style="margin-bottom: var(--spacing-md);">Pošaljite Upit</h3>
+                    <h3 style="margin-bottom: var(--spacing-md);" data-lang="contact_form_title">Pošaljite Upit</h3>
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Ime i Prezime *</label>
-                            <input type="text" id="name" name="name" required placeholder="Vaše ime">
+                            <label for="name" data-lang="label_name">Ime i Prezime *</label>
+                            <input type="text" id="name" name="name" required placeholder="Vaše ime"
+                                data-lang-placeholder="placeholder_name">
                         </div>
                         <div class="form-group">
-                            <label for="phone">Telefon *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+381 64 XXX XXXX">
+                            <label for="phone" data-lang="label_phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+381 64 XXX XXXX"
+                                data-lang-placeholder="placeholder_phone">
                         </div>
                         <div class="form-group">
-                            <label for="car">Model Automobila</label>
-                            <input type="text" id="car" name="car" placeholder="npr. BMW M4 2023">
+                            <label for="car" data-lang="label_car_model">Model Automobila</label>
+                            <input type="text" id="car" name="car" placeholder="npr. BMW M4 2023"
+                                data-lang-placeholder="placeholder_car_model">
                         </div>
                         <div class="form-group">
-                            <label for="service">Usluga</label>
+                            <label for="service" data-lang="label_service">Usluga</label>
                             <select id="service" name="service">
-                                <option value="">Izaberite uslugu</option>
-                                <option value="ceramic">Keramička Zaštita</option>
-                                <option value="polish">Poliranje</option>
-                                <option value="deepwash">Deep Wash</option>
+                                <option value="" data-lang="option_select_service">Izaberite uslugu</option>
+                                <option value="ceramic" data-lang="srv_ceramic_title">Keramička Zaštita</option>
+                                <option value="polish" data-lang="srv_polish_title">Poliranje</option>
+                                <option value="deepwash" data-lang="srv_wash_title">Deep Wash</option>
                                 <option value="ppf">PPF Folija</option>
-                                <option value="other">Ostalo</option>
+                                <option value="other" data-lang="option_other">Ostalo</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Poruka</label>
-                            <textarea id="message" name="message"
-                                placeholder="Opišite šta vam je potrebno..."></textarea>
+                            <label for="message" data-lang="label_message">Poruka</label>
+                            <textarea id="message" name="message" placeholder="Opišite šta vam je potrebno..."
+                                data-lang-placeholder="placeholder_message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Pošalji Upit</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-lang="btn_send">Pošalji
+                            Upit</button>
                     </form>
                 </div>
                 <div class="contact-info">
                     <div class="contact-info-item">
                         <div class="contact-info-icon">📞</div>
                         <div class="contact-info-text">
-                            <h4>Telefon</h4>
+                            <h4 data-lang="footer_contact_phone">Telefon</h4>
                             <p><a href="tel:+381677671862">+381 67 767 1862</a></p>
                         </div>
                     </div>
                     <div class="contact-info-item">
                         <div class="contact-info-icon">📧</div>
                         <div class="contact-info-text">
-                            <h4>Email</h4>
+                            <h4 data-lang="footer_contact_email">Email</h4>
                             <p><a href="mailto:info@bgdcars.rs">bgdcars1@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-info-item">
                         <div class="contact-info-icon">📍</div>
                         <div class="contact-info-text">
-                            <h4>Adresa</h4>
+                            <h4 data-lang="footer_contact_address">Adresa</h4>
                             <p><a href="https://maps.google.com/?q=Branka+Radičevića+13,+Beograd" target="_blank">Branka
                                     Radičevića 13,<br>Beograd</a></p>
                         </div>
@@ -115,8 +140,8 @@
                     <div class="contact-info-item">
                         <div class="contact-info-icon">🕐</div>
                         <div class="contact-info-text">
-                            <h4>Radno Vreme</h4>
-                            <p>Pon - Pet: 09:00 - 18:00<br>Sub: 09:00 - 14:00</p>
+                            <h4 data-lang="contact_working_hours">Radno Vreme</h4>
+                            <p data-lang="working_hours_time">Pon - Pet: 09:00 - 18:00<br>Sub: 09:00 - 14:00</p>
                         </div>
                     </div>
                     <div class="map-wrapper">
@@ -129,12 +154,35 @@
         </div>
     </section>
 
+    
+    <!-- Partners -->
+    <section class="section partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naši partneri</h2>
+                <p>Brendovi i timovi sa kojima gradimo kvalitetnu priču.</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card"><div class="partner-logo">Auto Etiketa</div></div>
+                <div class="partner-card"><div class="partner-logo">Coding Garage</div></div>
+                <div class="partner-card"><div class="partner-logo">Lent.rs</div></div>
+                <div class="partner-card"><div class="partner-logo">Posteri Automobila</div></div>
+                <div class="partner-card"><div class="partner-logo">Mega Detailing</div></div>
+                <div class="partner-card"><div class="partner-logo">Ghost Sim Racing</div></div>
+                <div class="partner-card"><div class="partner-logo">Štamparija Prof Print</div></div>
+                <div class="partner-card"><div class="partner-logo">G Rateo</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <h4>BGDCARS <span class="text-primary">Detailing</span></h4>
-                    <p style="margin-top: var(--spacing-xs);">Premium auto detailing studio u Beogradu. Vaš automobil u
+                    <p style="margin-top: var(--spacing-xs);" data-lang="footer_desc">Premium auto detailing studio u
+                        Beogradu. Vaš automobil u
                         sigurnim rukama.</p>
                     <div class="footer-socials">
                         <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -146,25 +194,28 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Navigacija</h4>
+                    <h4 data-lang="footer_nav">Navigacija</h4>
                     <ul class="footer-links">
-                        <li><a href="../index.html">Početna</a></li>
-                        <li><a href="about.html">O Nama</a></li>
-                        <li><a href="services.html">Usluge</a></li>
-                        <li><a href="pricing.html">Cenovnik</a></li>
-                        <li><a href="club.html">Auto Klub</a></li>
+                        <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                        <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                        <li><a href="services.html" data-lang="nav_services">Usluge</a></li>
+                        <li><a href="pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                        <li><a href="club.html" data-lang="nav_club">Auto Klub</a></li>
+                        <li><a href="bgdcars.html" data-lang="nav_bgdcars">BGDCARS</a></li>
+                        <li><a href="bgdcars-ads.html" data-lang="nav_bgdcars_ads">BGDCARS Ads</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Usluge</h4>
+                    <h4 data-lang="footer_services">Usluge</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Keramička Zaštita</a></li>
-                        <li><a href="services.html">Poliranje</a></li>
-                        <li><a href="services.html">Deep Wash</a></li>
+                        <li><a href="services.html" data-lang="srv_ceramic_title">Keramička Zaštita</a></li>
+                        <li><a href="services.html" data-lang="srv_polish_title">Poliranje</a></li>
+                        <li><a href="services.html" data-lang="srv_wash_title">Deep Wash</a></li>
+                        <li><a href="services.html">PPF Folija</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Kontakt</h4>
+                    <h4 data-lang="footer_contact">Kontakt</h4>
                     <ul class="footer-links">
                         <li><a href="tel:+381677671862" style="color: inherit;">📞 +381 67 767 1862</a></li>
                         <li><a href="mailto:info@bgdcars.rs" style="color: inherit;">📧 bgdcars1@gmail.com</a></li>
@@ -174,10 +225,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by Djurke23.</p>
+                <p data-lang="footer_rights">&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by
+                    Djurke23.</p>
             </div>
         </div>
     </footer>
+    <script src="../assets/js/translations.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 

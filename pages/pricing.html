@@ -21,17 +21,19 @@
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="navbar-brand">
-                BGD <span>Cars</span>
+                <img src="../assets/img/logo.png" alt="BGD Cars Logo" style="height: 40px; width: auto;">
+                BGDCARS<span>Detailing</span>
             </a>
             <div style="display: flex; align-items: center;">
                 <ul class="navbar-nav">
-                    <li><a href="../index.html">Početna</a></li>
-                    <li><a href="about.html">O Nama</a></li>
-                    <li><a href="services.html">Usluge</a></li>
-                    <li><a href="pricing.html" class="active">Cenovnik</a></li>
-                    <li><a href="gallery.html">Galerija</a></li>
-                    <li><a href="club.html">Auto Klub</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                    <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                    <li><a href="services.html" data-lang="nav_services">Usluge</a></li>
+                    <li><a href="pricing.html" class="active" data-lang="nav_pricing">Cenovnik</a></li>
+                    <li><a href="gallery.html" data-lang="nav_gallery">Galerija</a></li>
+                    <li><a href="club.html" data-lang="nav_club">Auto Klub</a></li>
+                    <li><a href="blog.html" data-lang="nav_blog">Blog</a></li>
+                    <li><a href="contact.html" data-lang="nav_contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-socials">
                     <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -40,6 +42,23 @@
                             class="fab fa-tiktok social-icon"></i></a>
                     <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
                             class="fab fa-youtube social-icon"></i></a>
+                </div>
+                <!-- Language Switcher (Dropdown) -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn">
+                        <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-menu" style="min-width: auto; padding: 0.5rem;">
+                        <a href="#" class="lang-item active" data-lang-select="sr"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        </a>
+                        <a href="#" class="lang-item" data-lang-select="en"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="lang-flag">
+                        </a>
+                    </div>
                 </div>
             </div>
             <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -53,8 +72,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1><span class="text-primary">Cenovnik</span></h1>
-            <p>Transparentne cene za sve naše usluge</p>
+            <h1><span class="text-primary" data-lang="pricing_title">Cenovnik</span></h1>
+            <p data-lang="pricing_subtitle">Transparentne cene za sve naše usluge</p>
         </div>
     </section>
 
@@ -62,8 +81,8 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Cenovnik <span class="text-primary">Usluga</span></h2>
-                <p>Detaljan pregled cena naših detailing usluga</p>
+                <h2 data-lang="services_pricelist_title">Cenovnik <span class="text-primary">Usluga</span></h2>
+                <p data-lang="services_pricelist_subtitle">Detaljan pregled cena naših detailing usluga</p>
             </div>
 
             <div class="pricing-grid-new">
@@ -72,38 +91,38 @@
                     <div class="card-icon">
                         <i class="fas fa-spray-can"></i>
                     </div>
-                    <h3>Poliranje automobila</h3>
+                    <h3 data-lang="pricing_polish_title">Poliranje automobila</h3>
                     <div class="table-responsive">
                         <table class="pricing-table">
                             <thead>
                                 <tr>
-                                    <th>Usluga</th>
-                                    <th>Mali</th>
-                                    <th>Srednji</th>
-                                    <th>Veliki</th>
+                                    <th data-lang="th_service">Usluga</th>
+                                    <th data-lang="th_small">Mali</th>
+                                    <th data-lang="th_medium">Srednji</th>
+                                    <th data-lang="th_large">Veliki</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Jednoslojno</td>
+                                    <td data-lang="td_1_layer">Jednoslojno</td>
                                     <td>130€</td>
                                     <td>150€</td>
                                     <td>180€</td>
                                 </tr>
                                 <tr>
-                                    <td>Dvoslojno</td>
+                                    <td data-lang="td_2_layers">Dvoslojno</td>
                                     <td>170€</td>
                                     <td>210€</td>
                                     <td>240€</td>
                                 </tr>
                                 <tr>
-                                    <td>Troslojno</td>
+                                    <td data-lang="td_3_layers">Troslojno</td>
                                     <td>230€</td>
                                     <td>270€</td>
                                     <td>300€</td>
                                 </tr>
                                 <tr>
-                                    <td>Višeslojno</td>
+                                    <td data-lang="td_multi_layers">Višeslojno</td>
                                     <td>280€</td>
                                     <td>330€</td>
                                     <td>360€</td>
@@ -118,35 +137,41 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Keramička zaštita</h3>
+                    <h3 data-lang="pricing_ceramic_title">Keramička zaštita</h3>
                     <div class="table-responsive">
                         <table class="pricing-table">
                             <thead>
                                 <tr>
-                                    <th>Trajanje</th>
-                                    <th>Mali</th>
-                                    <th>Srednji</th>
-                                    <th>Veliki</th>
+                                    <th data-lang="th_duration">Trajanje</th>
+                                    <th data-lang="th_small">Mali</th>
+                                    <th data-lang="th_medium">Srednji</th>
+                                    <th data-lang="th_large">Veliki</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>12 meseci</td>
-                                    <td>100€</td>
+                                    <td data-lang="td_12_months">12 meseci</td>
                                     <td>120€</td>
                                     <td>140€</td>
+                                    <td>160€</td>
                                 </tr>
                                 <tr>
-                                    <td>24 meseca</td>
-                                    <td colspan="3">Od 250€</td>
+                                    <td data-lang="td_24_months">24 meseca</td>
+                                    <td>200€</td>
+                                    <td>240€</td>
+                                    <td>280€</td>
                                 </tr>
                                 <tr>
-                                    <td>36 meseci</td>
-                                    <td colspan="3">Od 300€</td>
+                                    <td data-lang="td_36_months">36 meseci</td>
+                                    <td>280€</td>
+                                    <td>320€</td>
+                                    <td>360€</td>
                                 </tr>
                                 <tr>
-                                    <td>50 meseci</td>
-                                    <td colspan="3">Od 400€</td>
+                                    <td data-lang="td_60_months">60 meseci</td>
+                                    <td>350€</td>
+                                    <td>380€</td>
+                                    <td>410€</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -158,19 +183,24 @@
                     <div class="card-icon">
                         <i class="fas fa-car-side"></i>
                     </div>
-                    <h3>Detailing eksterijera</h3>
+                    <h3 data-lang="pricing_ext_title">Detailing eksterijera</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;"
+                        data-lang="pricing_ext_desc">
+                        Osnovno pranje, Ručno pranje, Pranje uvala, Čišćenje felni, Čišćenje potkrila, Sušenje
+                        automobila, Mazanje guma sa sjajem sa keramičkom zaštitom.
+                    </p>
                     <ul class="price-list">
                         <li>
-                            <span>Mali auto</span>
-                            <span class="price-value">100€</span>
+                            <span data-lang="size_small">Mali auto</span>
+                            <span class="price-value">12€</span>
                         </li>
                         <li>
-                            <span>Srednji auto</span>
-                            <span class="price-value">150€</span>
+                            <span data-lang="size_medium">Srednji auto</span>
+                            <span class="price-value">18€</span>
                         </li>
                         <li>
-                            <span>Veliki auto</span>
-                            <span class="price-value">180€</span>
+                            <span data-lang="size_large">Veliki auto</span>
+                            <span class="price-value">22€</span>
                         </li>
                     </ul>
                 </div>
@@ -180,19 +210,24 @@
                     <div class="card-icon">
                         <i class="fas fa-couch"></i>
                     </div>
-                    <h3>Detailing enterijera</h3>
+                    <h3 data-lang="pricing_int_title">Detailing enterijera</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;"
+                        data-lang="pricing_int_desc">
+                        Usisavanje automobila, Uklanjanje dlaka sa podova, Čišćenje ventilacionih otvora, Čišćenje celog
+                        enterijera četkicama, Brisanje stakala.
+                    </p>
                     <ul class="price-list">
                         <li>
-                            <span>Mali auto</span>
-                            <span class="price-value">80€</span>
+                            <span data-lang="size_small">Mali auto</span>
+                            <span class="price-value">30€</span>
                         </li>
                         <li>
-                            <span>Srednji auto</span>
-                            <span class="price-value">100€</span>
+                            <span data-lang="size_medium">Srednji auto</span>
+                            <span class="price-value">45€</span>
                         </li>
                         <li>
-                            <span>Veliki auto</span>
-                            <span class="price-value">120€</span>
+                            <span data-lang="size_large">Veliki auto</span>
+                            <span class="price-value">60€</span>
                         </li>
                     </ul>
                 </div>
@@ -202,10 +237,11 @@
                     <div class="card-icon">
                         <i class="far fa-lightbulb"></i>
                     </div>
-                    <h3>Polimerizacija farova</h3>
+                    <h3 data-lang="pricing_headlight_title">Polimerizacija farova</h3>
                     <div class="single-price">
-                        <p>Bilo koji tip vozila</p>
-                        <div class="big-price">50€</div>
+                        <p style="margin-bottom: 0.5rem;" data-lang="pricing_headlight_desc">Polimerizacija + Keramička
+                            zaštita (12 meseci)</p>
+                        <div class="big-price">55€</div>
                     </div>
                 </div>
 
@@ -214,18 +250,22 @@
                     <div class="card-icon">
                         <i class="fas fa-wind"></i>
                     </div>
-                    <h3>Dubinsko čišćenje</h3>
+                    <h3 data-lang="pricing_deep_title">Dubinsko čišćenje</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;"
+                        data-lang="pricing_deep_desc">
+                        Detailing enterijera, Dubinsko čišćenje sedišta, Sušenje.
+                    </p>
                     <ul class="price-list">
                         <li>
-                            <span>Mali auto</span>
+                            <span data-lang="size_small">Mali auto</span>
                             <span class="price-value">100€</span>
                         </li>
                         <li>
-                            <span>Srednji auto</span>
+                            <span data-lang="size_medium">Srednji auto</span>
                             <span class="price-value">120€</span>
                         </li>
                         <li>
-                            <span>Veliki auto</span>
+                            <span data-lang="size_large">Veliki auto</span>
                             <span class="price-value">140€</span>
                         </li>
                     </ul>
@@ -239,10 +279,31 @@
     <!-- CTA -->
     <section class="section">
         <div class="container text-center">
-            <h2>Potrebna Vam Je <span class="text-primary">Pomoć?</span></h2>
-            <p style="max-width: 600px; margin: var(--spacing-sm) auto var(--spacing-md);">Niste sigurni koji paket je
+            <h2 data-lang="cta_help_title">Potrebna Vam Je <span class="text-primary">Pomoć?</span></h2>
+            <p style="max-width: 600px; margin: var(--spacing-sm) auto var(--spacing-md);" data-lang="cta_help_desc">
+                Niste sigurni koji paket je
                 pravi za vas? Javite nam se i pomoći ćemo vam da izaberete.</p>
-            <a href="contact.html" class="btn btn-primary btn-lg">Kontaktirajte Nas</a>
+            <a href="contact.html" class="btn btn-primary btn-lg" data-lang="btn_contact">Kontaktirajte Nas</a>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naši partneri</h2>
+                <p>Brendovi i timovi sa kojima gradimo kvalitetnu priču.</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card"><div class="partner-logo">Auto Etiketa</div></div>
+                <div class="partner-card"><div class="partner-logo">Coding Garage</div></div>
+                <div class="partner-card"><div class="partner-logo">Lent.rs</div></div>
+                <div class="partner-card"><div class="partner-logo">Posteri Automobila</div></div>
+                <div class="partner-card"><div class="partner-logo">Mega Detailing</div></div>
+                <div class="partner-card"><div class="partner-logo">Ghost Sim Racing</div></div>
+                <div class="partner-card"><div class="partner-logo">Štamparija Prof Print</div></div>
+                <div class="partner-card"><div class="partner-logo">G Rateo</div></div>
+            </div>
         </div>
     </section>
 
@@ -252,7 +313,8 @@
             <div class="footer-grid">
                 <div>
                     <h4>BGDCARS <span class="text-primary">Detailing</span></h4>
-                    <p style="margin-top: var(--spacing-xs);">Premium auto detailing studio u Beogradu. Vaš automobil u
+                    <p style="margin-top: var(--spacing-xs);" data-lang="footer_desc">Premium auto detailing studio u
+                        Beogradu. Vaš automobil u
                         sigurnim rukama.</p>
                     <div class="footer-socials">
                         <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -264,26 +326,28 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Navigacija</h4>
+                    <h4 data-lang="footer_nav">Navigacija</h4>
                     <ul class="footer-links">
-                        <li><a href="../index.html">Početna</a></li>
-                        <li><a href="about.html">O Nama</a></li>
-                        <li><a href="services.html">Usluge</a></li>
-                        <li><a href="pricing.html">Cenovnik</a></li>
-                        <li><a href="club.html">Auto Klub</a></li>
+                        <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                        <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                        <li><a href="services.html" data-lang="nav_services">Usluge</a></li>
+                        <li><a href="pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                        <li><a href="club.html" data-lang="nav_club">Auto Klub</a></li>
+                        <li><a href="bgdcars.html" data-lang="nav_bgdcars">BGDCARS</a></li>
+                        <li><a href="bgdcars-ads.html" data-lang="nav_bgdcars_ads">BGDCARS Ads</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Usluge</h4>
+                    <h4 data-lang="footer_services">Usluge</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Keramička Zaštita</a></li>
-                        <li><a href="services.html">Poliranje</a></li>
-                        <li><a href="services.html">Deep Wash</a></li>
+                        <li><a href="services.html" data-lang="srv_ceramic_title">Keramička Zaštita</a></li>
+                        <li><a href="services.html" data-lang="srv_polish_title">Poliranje</a></li>
+                        <li><a href="services.html" data-lang="srv_wash_title">Deep Wash</a></li>
                         <li><a href="services.html">PPF Folija</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Kontakt</h4>
+                    <h4 data-lang="footer_contact">Kontakt</h4>
                     <ul class="footer-links">
                         <li><a href="tel:+381677671862" style="color: inherit;">📞 +381 67 767 1862</a></li>
                         <li><a href="mailto:info@bgdcars.rs" style="color: inherit;">📧 bgdcars1@gmail.com</a></li>
@@ -293,11 +357,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by Djurke23.</p>
+                <p data-lang="footer_rights">&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by
+                    Djurke23.</p>
             </div>
         </div>
     </footer>
 
+    <script src="../assets/js/translations.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 

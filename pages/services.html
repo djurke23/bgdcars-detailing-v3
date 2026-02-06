@@ -21,17 +21,19 @@
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="navbar-brand">
-                BGD <span>Cars</span>
+                <img src="../assets/img/logo.png" alt="BGD Cars Logo" style="height: 40px; width: auto;">
+                BGDCARS<span>Detailing</span>
             </a>
             <div style="display: flex; align-items: center;">
                 <ul class="navbar-nav">
-                    <li><a href="../index.html">Početna</a></li>
-                    <li><a href="about.html">O Nama</a></li>
-                    <li><a href="services.html" class="active">Usluge</a></li>
-                    <li><a href="pricing.html">Cenovnik</a></li>
-                    <li><a href="gallery.html">Galerija</a></li>
-                    <li><a href="club.html">Auto Klub</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                    <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                    <li><a href="services.html" class="active" data-lang="nav_services">Usluge</a></li>
+                    <li><a href="pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                    <li><a href="gallery.html" data-lang="nav_gallery">Galerija</a></li>
+                    <li><a href="club.html" data-lang="nav_club">Auto Klub</a></li>
+                    <li><a href="blog.html" data-lang="nav_blog">Blog</a></li>
+                    <li><a href="contact.html" data-lang="nav_contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-socials">
                     <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -40,6 +42,23 @@
                             class="fab fa-tiktok social-icon"></i></a>
                     <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
                             class="fab fa-youtube social-icon"></i></a>
+                </div>
+                <!-- Language Switcher (Dropdown) -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn">
+                        <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-menu" style="min-width: auto; padding: 0.5rem;">
+                        <a href="#" class="lang-item active" data-lang-select="sr"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        </a>
+                        <a href="#" class="lang-item" data-lang-select="en"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="lang-flag">
+                        </a>
+                    </div>
                 </div>
             </div>
             <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -53,8 +72,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Naše <span class="text-primary">Usluge</span></h1>
-            <p>Kompletna nega vašeg automobila na jednom mestu</p>
+            <h1 data-lang="services_main_title">Naše <span class="text-primary">Usluge</span></h1>
+            <p data-lang="services_main_subtitle">Kompletna nega vašeg automobila na jednom mestu</p>
         </div>
     </section>
 
@@ -62,72 +81,81 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Premium <span class="text-primary">Detailing</span></h2>
-                <p>Svaka usluga je prilagođena potrebama vašeg vozila</p>
+                <h2 data-lang="premium_detailing_title">Premium <span class="text-primary">Detailing</span></h2>
+                <p data-lang="premium_detailing_subtitle">Svaka usluga je prilagođena potrebama vašeg vozila</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🔮</div>
-                    <h3>Keramička Zaštita</h3>
-                    <p>Profesionalna aplikacija keramičkog premaza koji štiti lak do 5 godina. Hidrofobnost, UV zaštita
+                    <h3 data-lang="srv_ceramic_title">Keramička Zaštita</h3>
+                    <p data-lang="srv_ceramic_desc">Profesionalna aplikacija keramičkog premaza koji štiti lak do 5
+                        godina. Hidrofobnost, UV zaštita
                         i neverovatni sjaj. Koristimo Gyeon i Koch Chemie proizvode.</p>
-                    <span class="price">od €350</span>
+                    <span class="price" data-lang="price_from_350">od €350</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">✨</div>
-                    <h3>Poliranje</h3>
-                    <p>Višestepeno poliranje za uklanjanje ogrebotina, hologramskih tragova i swirl markova. Vraćamo
+                    <h3 data-lang="srv_polish_title">Poliranje</h3>
+                    <p data-lang="srv_polish_desc">Višestepeno poliranje za uklanjanje ogrebotina, hologramskih tragova
+                        i swirl markova. Vraćamo
                         izvorni sjaj vašem vozilu mašinskim poliranjem.</p>
-                    <span class="price">od €150</span>
+                    <span class="price" data-lang="price_from_150">od €150</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💎</div>
-                    <h3>Deep Wash</h3>
-                    <p>Dubinsko pranje enterijera i eksterijera. Dezinfekcija klime, čišćenje kože i tkanine, poliranje
+                    <h3 data-lang="srv_wash_title">Deep Wash</h3>
+                    <p data-lang="srv_wash_desc">Dubinsko pranje enterijera i eksterijera. Dezinfekcija klime, čišćenje
+                        kože i tkanine, poliranje
                         plastike. Potpuno osveženje vozila.</p>
-                    <span class="price">od €80</span>
+                    <span class="price" data-lang="price_from_80">od €80</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🛡️</div>
-                    <h3>PPF Zaštitna Folija</h3>
-                    <p>Paint Protection Film - najjača zaštita od udaraca kamenja, ogrebotina i hemikalija.
+                    <h3 data-lang="srv_ppf_title">PPF Zaštitna Folija</h3>
+                    <p data-lang="srv_ppf_desc">Paint Protection Film - najjača zaštita od udaraca kamenja, ogrebotina i
+                        hemikalija.
                         Samoisceljujuća folija premium kvaliteta.</p>
-                    <span class="price">od €800</span>
+                    <span class="price" data-lang="price_from_800">od €800</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
-                    <h3>Dekontaminacija</h3>
-                    <p>Glina, Iron remover i Tar remover tretman. Uklanjamo metalne čestice, katran i industrijsko
+                    <h3 data-lang="srv_decon_title">Dekontaminacija</h3>
+                    <p data-lang="srv_decon_desc">Glina, Iron remover i Tar remover tretman. Uklanjamo metalne čestice,
+                        katran i industrijsko
                         zagađenje sa površine laka.</p>
-                    <span class="price">od €60</span>
+                    <span class="price" data-lang="price_from_60">od €60</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🪟</div>
-                    <h3>Zaštita Stakala</h3>
-                    <p>Hidrofobni tretman svih stakala. Voda klizi pri brzini od 50 km/h. Bolja vidljivost i lakše
+                    <h3 data-lang="srv_glass_title">Zaštita Stakala</h3>
+                    <p data-lang="srv_glass_desc">Hidrofobni tretman svih stakala. Voda klizi pri brzini od 50 km/h.
+                        Bolja vidljivost i lakše
                         čišćenje tokom cele godine.</p>
-                    <span class="price">od €50</span>
+                    <span class="price" data-lang="price_from_50">od €50</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
-                    <h3>Korekcija Laka</h3>
-                    <p>Profesionalna korekcija i renoviranje starijih farbi. Uklanjanje dubokih ogrebotina, oksidacije i
+                    <h3 data-lang="srv_paint_corr_title">Korekcija Laka</h3>
+                    <p data-lang="srv_paint_corr_desc">Profesionalna korekcija i renoviranje starijih farbi. Uklanjanje
+                        dubokih ogrebotina, oksidacije i
                         vraćanje boje u prvobitno stanje.</p>
-                    <span class="price">od €200</span>
+                    <span class="price" data-lang="price_from_200">od €200</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🧴</div>
-                    <h3>Nega Kože</h3>
-                    <p>Čišćenje, hranjenje i zaštita kožnog enterijera. Uklanjanje fleka, vraćanje mekoće i produženje
+                    <h3 data-lang="srv_leather_title">Nega Kože</h3>
+                    <p data-lang="srv_leather_desc">Čišćenje, hranjenje i zaštita kožnog enterijera. Uklanjanje fleka,
+                        vraćanje mekoće i produženje
                         životnog veka kože.</p>
-                    <span class="price">od €70</span>
+                    <span class="price" data-lang="price_from_70">od €70</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚙️</div>
-                    <h3>Engine Bay Detailing</h3>
-                    <p>Profesionalno čišćenje i ulepšavanje motornog prostora. Sigurno za elektroniku, sa zaštitom svih
+                    <h3 data-lang="srv_engine_title">Engine Bay Detailing</h3>
+                    <p data-lang="srv_engine_desc">Profesionalno čišćenje i ulepšavanje motornog prostora. Sigurno za
+                        elektroniku, sa zaštitom svih
                         plastičnih i gumenih delova.</p>
-                    <span class="price">od €50</span>
+                    <span class="price" data-lang="price_from_50">od €50</span>
                 </div>
             </div>
         </div>
@@ -137,30 +165,34 @@
     <section class="section" style="background: var(--bg-card);">
         <div class="container">
             <div class="section-header">
-                <h2>Naš <span class="text-primary">Proces</span></h2>
-                <p>Svaki automobil prolazi kroz temeljnu proceduru</p>
+                <h2 data-lang="process_title">Naš <span class="text-primary">Proces</span></h2>
+                <p data-lang="process_subtitle">Svaki automobil prolazi kroz temeljnu proceduru</p>
             </div>
-            <div class="services-grid">
+            <div class="process-grid">
                 <div class="service-card">
                     <div class="service-icon">1️⃣</div>
-                    <h3>Konsultacija</h3>
-                    <p>Procena stanja vozila i razgovor o vašim željama i potrebama. Kreiramo personalizovan plan
+                    <h3 data-lang="step_1_title">Konsultacija</h3>
+                    <p data-lang="step_1_desc">Procena stanja vozila i razgovor o vašim željama i potrebama. Kreiramo
+                        personalizovan plan
                         tretmana.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">2️⃣</div>
-                    <h3>Priprema</h3>
-                    <p>Detaljno pranje, dekontaminacija i priprema površina za dalji rad. Bez prečica.</p>
+                    <h3 data-lang="step_2_title">Priprema</h3>
+                    <p data-lang="step_2_desc">Detaljno pranje, dekontaminacija i priprema površina za dalji rad. Bez
+                        prečica.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">3️⃣</div>
-                    <h3>Tretman</h3>
-                    <p>Izvođenje odabranih usluga sa maksimalnom pažnjom. Dokumentujemo svaki korak.</p>
+                    <h3 data-lang="step_3_title">Tretman</h3>
+                    <p data-lang="step_3_desc">Izvođenje odabranih usluga sa maksimalnom pažnjom. Dokumentujemo svaki
+                        korak.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">4️⃣</div>
-                    <h3>Finalizacija</h3>
-                    <p>Završna inspekcija, fotografisanje rezultata i predaja vozila. Dajemo savete za održavanje.</p>
+                    <h3 data-lang="step_4_title">Finalizacija</h3>
+                    <p data-lang="step_4_desc">Završna inspekcija, fotografisanje rezultata i predaja vozila. Dajemo
+                        savete za održavanje.</p>
                 </div>
             </div>
         </div>
@@ -170,16 +202,17 @@
     <section class="section">
         <div class="container faq-container">
             <div class="section-header">
-                <h2>Često Postavljana <span class="text-primary">Pitanja</span></h2>
-                <p>Odgovori na najčešća pitanja o našim uslugama</p>
+                <h2 data-lang="faq_title">Često Postavljana <span class="text-primary">Pitanja</span></h2>
+                <p data-lang="faq_subtitle">Odgovori na najčešća pitanja o našim uslugama</p>
             </div>
             <div class="faq-item">
                 <button class="faq-question">
-                    Koliko traje proces keramičke zaštite?
+                    <span data-lang="faq_1_q">Koliko traje proces keramičke zaštite?</span>
                     <span class="faq-toggle-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Proces keramičke zaštite obično traje između 2 i 3 dana. Prvi dan se radi detaljno pranje,
+                    <p data-lang="faq_1_a">Proces keramičke zaštite obično traje između 2 i 3 dana. Prvi dan se radi
+                        detaljno pranje,
                         dekontaminacija i poliranje (priprema podloge). Drugi dan se nanosi keramika koja mora da
                         odstoji (kuring proces). Treći dan se radi finalna inspekcija i vozilo je spremno za
                         preuzimanje.</p>
@@ -187,22 +220,24 @@
             </div>
             <div class="faq-item">
                 <button class="faq-question">
-                    Da li dajete garanciju na poliranje?
+                    <span data-lang="faq_2_q">Da li dajete garanciju na poliranje?</span>
                     <span class="faq-toggle-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Da, dajemo garanciju na naš rad. Međutim, trajnost rezultata poliranja zavisi od toga kako
+                    <p data-lang="faq_2_a">Da, dajemo garanciju na naš rad. Međutim, trajnost rezultata poliranja zavisi
+                        od toga kako
                         održavate vozilo nakon tretmana. Ako perete auto na četkama ili sunđerom punim peska, ogrebotine
                         će se vratiti. Uz našu edukaciju o održavanju, rezultati mogu trajati godinama.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">
-                    Koja je razlika između voska i keramike?
+                    <span data-lang="faq_3_q">Koja je razlika između voska i keramike?</span>
                     <span class="faq-toggle-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Vosak je organska zaštita koja traje 3-6 meseci i pruža topao sjaj, ali se lako skida
+                    <p data-lang="faq_3_a">Vosak je organska zaštita koja traje 3-6 meseci i pruža topao sjaj, ali se
+                        lako skida
                         hemikalijama. Keramika (SiO2) je hemijska veza sa lakom koja je mnogo tvrđa, otpornija na
                         hemikalije, UV zračenje i ogrebotine, i traje od 2 do 5 godina. Takođe, keramika ima mnogo bolja
                         hidrofobna svojstva (odbijanje vode).</p>
@@ -210,24 +245,46 @@
             </div>
             <div class="faq-item">
                 <button class="faq-question">
-                    Da li radite dubinsko pranje motora?
+                    <span data-lang="faq_4_q">Da li radite dubinsko pranje motora?</span>
                     <span class="faq-toggle-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Da, radimo detaljno čišćenje motornog prostora (Engine Bay Detailing). Koristimo specijalne
+                    <p data-lang="faq_4_a">Da, radimo detaljno čišćenje motornog prostora (Engine Bay Detailing).
+                        Koristimo specijalne
                         četkice, paročistače i sredstva bezbedna za plastiku i gumu. Osetljivu elektroniku zaštićujemo
                         pre pranja. Na kraju sve plastike tretiramo dresingom za novi izgled.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">
-                    Kako da zakažem termin?
+                    <span data-lang="faq_5_q">Kako da zakažem termin?</span>
                     <span class="faq-toggle-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Termin možete zakazati pozivom na naš broj telefona, slanjem email-a ili popunjavanjem forme na
+                    <p data-lang="faq_5_a">Termin možete zakazati pozivom na naš broj telefona, slanjem email-a ili
+                        popunjavanjem forme na
                         stranici Kontakt. Preporučujemo zakazivanje 5-7 dana unapred.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naši partneri</h2>
+                <p>Brendovi i timovi sa kojima gradimo kvalitetnu priču.</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card"><div class="partner-logo">Auto Etiketa</div></div>
+                <div class="partner-card"><div class="partner-logo">Coding Garage</div></div>
+                <div class="partner-card"><div class="partner-logo">Lent.rs</div></div>
+                <div class="partner-card"><div class="partner-logo">Posteri Automobila</div></div>
+                <div class="partner-card"><div class="partner-logo">Mega Detailing</div></div>
+                <div class="partner-card"><div class="partner-logo">Ghost Sim Racing</div></div>
+                <div class="partner-card"><div class="partner-logo">Štamparija Prof Print</div></div>
+                <div class="partner-card"><div class="partner-logo">G Rateo</div></div>
             </div>
         </div>
     </section>
@@ -238,7 +295,8 @@
             <div class="footer-grid">
                 <div>
                     <h4>BGDCARS <span class="text-primary">Detailing</span></h4>
-                    <p style="margin-top: var(--spacing-xs);">Premium auto detailing studio u Beogradu. Vaš automobil u
+                    <p style="margin-top: var(--spacing-xs);" data-lang="footer_desc">Premium auto detailing studio u
+                        Beogradu. Vaš automobil u
                         sigurnim rukama.</p>
                     <div class="footer-socials">
                         <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -250,26 +308,28 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Navigacija</h4>
+                    <h4 data-lang="footer_nav">Navigacija</h4>
                     <ul class="footer-links">
-                        <li><a href="../index.html">Početna</a></li>
-                        <li><a href="about.html">O Nama</a></li>
-                        <li><a href="services.html">Usluge</a></li>
-                        <li><a href="pricing.html">Cenovnik</a></li>
-                        <li><a href="club.html">Auto Klub</a></li>
+                        <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                        <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                        <li><a href="services.html" data-lang="nav_services">Usluge</a></li>
+                        <li><a href="pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                        <li><a href="club.html" data-lang="nav_club">Auto Klub</a></li>
+                        <li><a href="bgdcars.html" data-lang="nav_bgdcars">BGDCARS</a></li>
+                        <li><a href="bgdcars-ads.html" data-lang="nav_bgdcars_ads">BGDCARS Ads</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Usluge</h4>
+                    <h4 data-lang="footer_services">Usluge</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Keramička Zaštita</a></li>
-                        <li><a href="services.html">Poliranje</a></li>
-                        <li><a href="services.html">Deep Wash</a></li>
+                        <li><a href="services.html" data-lang="srv_ceramic_title">Keramička Zaštita</a></li>
+                        <li><a href="services.html" data-lang="srv_polish_title">Poliranje</a></li>
+                        <li><a href="services.html" data-lang="srv_wash_title">Deep Wash</a></li>
                         <li><a href="services.html">PPF Folija</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Kontakt</h4>
+                    <h4 data-lang="footer_contact">Kontakt</h4>
                     <ul class="footer-links">
                         <li><a href="tel:+381677671862" style="color: inherit;">📞 +381 67 767 1862</a></li>
                         <li><a href="mailto:info@bgdcars.rs" style="color: inherit;">📧 bgdcars1@gmail.com</a></li>
@@ -279,11 +339,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by Djurke23.</p>
+                <p data-lang="footer_rights">&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by
+                    Djurke23.</p>
             </div>
         </div>
     </footer>
 
+    <script src="../assets/js/translations.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 
