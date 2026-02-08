@@ -21,17 +21,19 @@
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="navbar-brand">
+                <img src="../assets/img/logo.png" alt="BGD Cars Logo" style="height: 40px; width: auto;">
                 BGDCARS<span>Detailing</span>
             </a>
             <div style="display: flex; align-items: center;">
                 <ul class="navbar-nav">
-                    <li><a href="../index.html">Početna</a></li>
-                    <li><a href="about.html">O Nama</a></li>
-                    <li><a href="services.html">Usluge</a></li>
-                    <li><a href="pricing.html">Cenovnik</a></li>
-                    <li><a href="gallery.html">Galerija</a></li>
-                    <li><a href="club.html" class="active">Auto Klub</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                    <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                    <li><a href="services.html" data-lang="nav_services">Usluge</a></li>
+                    <li><a href="pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                    <li><a href="gallery.html" data-lang="nav_gallery">Galerija</a></li>
+                    <li><a href="club.html" class="active" data-lang="nav_club">Auto Klub</a></li>
+                    <li><a href="blog.html" data-lang="nav_blog">Blog</a></li>
+                    <li><a href="contact.html" data-lang="nav_contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-socials">
                     <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -40,6 +42,23 @@
                             class="fab fa-tiktok social-icon"></i></a>
                     <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
                             class="fab fa-youtube social-icon"></i></a>
+                </div>
+                <!-- Language Switcher (Dropdown) -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn">
+                        <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-menu" style="min-width: auto; padding: 0.5rem;">
+                        <a href="#" class="lang-item active" data-lang-select="sr"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/rs.png" alt="SR" class="lang-flag">
+                        </a>
+                        <a href="#" class="lang-item" data-lang-select="en"
+                            style="justify-content: center; padding: 0.5rem;">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="lang-flag">
+                        </a>
+                    </div>
                 </div>
             </div>
             <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -52,93 +71,242 @@
 
     <!-- Hero Section -->
     <section class="club-hero">
-        <div class="container">
-            <span class="hero-subtitle">✦ Postani deo ekipe ✦</span>
-            <h1>BGD CARS<br><span class="text-primary">AUTO KLUB</span></h1>
+        <div class="video-overlay"></div>
+        <div class="container relative-z">
+            <span class="hero-subtitle" data-lang="club_hero_subtitle">✦ EKSKLUZIVNO ČLANSTVO ✦</span>
+            <h1><span data-lang="club_join">POSTANI DEO</span> <br><span class="text-primary glitched-text"
+                    data-lang="club_bgd_elite">BGD ELITE</span></h1>
 
-            <div class="club-price-tag">
-                Godišnja članarina: 3.100,00 rsd
+            <div class="club-price-tag-large">
+                <span class="currency">RSD</span>
+                <span class="amount">5.000</span>
+                <span class="period" data-lang="club_price_period">/ god</span>
             </div>
 
-            <p style="max-width: 600px; margin: 0 auto; color: var(--text-dim);">
-                Pridruži se zvaničnom BGD Cars klubu i uživaj u ekskluzivnim popustima, događajima i poklonima.
+            <p class="hero-desc" data-lang="club_description">
+                Pristup svetu detailinga rezervisanom samo za odabrane.
             </p>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="section">
+    <!-- Welcome Pack Showcase -->
+    <section class="section showcase-section">
         <div class="container">
             <div class="section-header">
-                <h2>Šta Dobijaju <span class="text-primary">Članovi?</span></h2>
-                <p>Paket dobrodošlice i benefiti članstva</p>
+                <h2>WELCOME <span class="text-primary">PACK</span></h2>
+                <p data-lang="club_welcome_pack">Svaki član dobija ekskluzivni paket dobrodošlice</p>
             </div>
 
+            <div class="club-showcase">
+                <div class="showcase-main">
+                    <!-- T-Shirt 1 -->
+                    <div class="tshirt-wrapper mb-3">
+                        <div class="item-badge" data-lang="club_badge_tshirt">PREMIUM MAJICA</div>
+                        <img src="../assets/img/club/tshirt.png" alt="BGD Cars Club T-Shirt"
+                            class="showcase-tshirt floating" onclick="openLightbox(this.src)">
+                    </div>
+
+                    <!-- T-Shirt 2 (Back/Exclusive) -->
+                    <div class="tshirt-wrapper">
+                        <div class="item-badge" data-lang="club_badge_exclusive">EKSLUZIVNA MAJICA</div>
+                        <img src="../assets/img/club/sticker_2.png" alt="Exclusive T-Shirt Design"
+                            class="showcase-tshirt" onclick="openLightbox(this.src)">
+                    </div>
+
+                    <p class="zoom-hint"><i class="fas fa-search-plus"></i> <span data-lang="club_zoom_hint">Klikni za
+                            uvećanje</span></p>
+                </div>
+
+                <div class="showcase-side">
+                    <div class="showcase-card-wrapper">
+                        <div class="item-badge-sm" data-lang="club_badge_card">ČLANSKA KARTA</div>
+                        <img src="../assets/img/club/card.png" alt="Membership Card" class="showcase-card"
+                            onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="sticker-item-large">
+                        <div class="item-badge-sm" data-lang="club_badge_sticker">NALEPNICA</div>
+                        <img src="../assets/img/club/sticker_1.png" alt="Sticker" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-darker">
+        <div class="container">
             <div class="club-benefits-grid">
                 <!-- Benefit 1 -->
-                <div class="benefit-card">
+                <div class="benefit-card glow-hover">
                     <div class="benefit-icon">
-                        <i class="fas fa-gift"></i>
+                        <i class="fas fa-crown"></i>
                     </div>
-                    <h3>Welcome Pack</h3>
-                    <p>Zvanična članska karta, ekskluzivna klupska majica, 2 manja stikera i stiker za zadnje staklo.
-                    </p>
+                    <h3>VIP Status</h3>
+                    <p data-lang="club_benefit_vip_desc">Prioritet prilikom zakazivanja termina i poseban tretman vašeg
+                        vozila.</p>
                 </div>
 
                 <!-- Benefit 2 -->
-                <div class="benefit-card">
+                <div class="benefit-card glow-hover">
                     <div class="benefit-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Auto Skupovi</h3>
-                    <p>Učestvuješ u organizaciji i prisustvuješ ekskluzivnim klupskim auto skupovima.</p>
+                    <h3 data-lang="club_benefit_community">Zajednica</h3>
+                    <p data-lang="club_benefit_community_desc">Učestvuj u organizaciji skupova i postani deo najjače
+                        auto ekipe u gradu.</p>
                 </div>
 
                 <!-- Benefit 3 -->
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-wrench"></i>
-                    </div>
-                    <h3>Stručna Pomoć</h3>
-                    <p>Pristup zajednici i saveti od strane iskusnih članova i prijatelja kluba.</p>
-                </div>
-
-                <!-- Benefit 4 -->
-                <div class="benefit-card">
+                <div class="benefit-card glow-hover">
                     <div class="benefit-icon">
                         <i class="fas fa-percent"></i>
                     </div>
-                    <h3>Popusti</h3>
-                    <p>Ostvari specijalne popuste na usluge detailinga i kod svih prijatelja kluba.</p>
+                    <h3 data-lang="club_benefit_discounts">Popusti</h3>
+                    <p data-lang="club_benefit_discounts_desc">Trajni popusti na sve usluge detailinga i pogodnosti kod
+                        partnera.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-card glow-hover">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 data-lang="club_benefit_gifts">Pokloni</h3>
+                    <p data-lang="club_benefit_gifts_desc">Ekskluzivni merch samo za članove i pokloni iznenađenja tokom
+                        godine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Merch Section (New) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>OFFICIAL <span class="text-primary">MERCH</span></h2>
+                <p data-lang="club_merch_subtitle">Limited Edition "Street Approved" kolekcija</p>
+            </div>
+
+            <div class="shop-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="../assets/img/shop/hoodie_front.jpg" alt="Hoodie Front" class="product-img"
+                        onclick="openLightbox(this.src)">
+                    <div class="product-info">
+                        <h3>Hoodie - Front</h3>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card featured">
+                    <div class="item-badge">BESTSELLER</div>
+                    <img src="../assets/img/shop/hoodie_set.jpg" alt="Hoodie Full Set" class="product-img"
+                        onclick="openLightbox(this.src)">
+                    <div class="product-info">
+                        <h3>Street Approved Hoodie</h3>
+                        <div class="product-price">6.000 RSD</div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="../assets/img/shop/hoodie_back.jpg" alt="Hoodie Back" class="product-img"
+                        onclick="openLightbox(this.src)">
+                    <div class="product-info">
+                        <h3>Hoodie - Back</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Application Section -->
-    <section class="section" style="background: var(--bg-card);">
+    <section class="section">
         <div class="container">
-            <div class="application-box">
-                <i class="fas fa-envelope-open-text"
-                    style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                <h2>Kako se <span class="text-primary">Prijaviti?</span></h2>
-                <p class="mb-2">Prijave se šalju direktno putem emaila. Klikni na dugme ispod ili pošalji email na
-                    <strong>bgdcars1@gmail.com</strong> sa sledećim podacima:</p>
-
-                <div class="required-info-list">
-                    <ul>
-                        <li>Ime i Prezime</li>
-                        <li>Grad</li>
-                        <li>Broj telefona</li>
-                        <li>Model automobila</li>
-                        <li><strong>Obavezno priložiti minimum 3 slike automobila</strong> 📸</li>
-                    </ul>
+            <div class="application-box glass-effect">
+                <div class="app-header">
+                    <i class="fas fa-file-signature"></i>
+                    <h2 data-lang="club_apply_title">PRIJAVI SE</h2>
                 </div>
 
-                <a href="mailto:bgdcars1@gmail.com?subject=Prijava za Auto Klub&body=Ime i prezime:%0D%0AGrad:%0D%0ABroj telefona:%0D%0AModel automobila:%0D%0A(Molimo vas priložite 3 slike automobila uz ovaj email)"
-                    class="btn btn-primary btn-lg mt-2">
-                    <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> POŠALJI PRIJAVU (EMAIL)
-                </a>
+                <div class="app-content">
+                    <p data-lang="club_apply_desc">Prijave se vrše slanjem podataka na naš zvanični email.</p>
+
+                    <div class="requirements-grid">
+                        <div class="req-item">
+                            <span class="req-icon">1</span>
+                            <span data-lang="club_req_1">Ime i Prezime</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-icon">2</span>
+                            <span data-lang="club_req_2">Model Automobila</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-icon">3</span>
+                            <span data-lang="club_req_3">Grad i Telefon</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-icon">4</span>
+                            <span data-lang="club_req_4">3 Slike Automobila</span>
+                        </div>
+                    </div>
+
+                    <a href="mailto:bgdcars1@gmail.com?subject=Prijava za Auto Klub&body=Želim da postanem član BGD Cars Auto Kluba!%0D%0A%0D%0APodaci:%0D%0AIme i prezime:%0D%0AGrad:%0D%0ABroj telefona:%0D%0AModel automobila:%0D%0A%0D%0A(Molimo vas priložite 3 slike automobila uz ovaj email)"
+                        class="btn btn-primary btn-lg btn-block pulse-btn">
+                        <i class="fas fa-paper-plane"></i> <span data-lang="club_btn_apply">POŠALJI PRIJAVU</span>
+                    </a>
+                    <p class="small-note mt-1" data-lang="club_email_note">Klikom na dugme otvoriće se vaš email
+                        klijent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="imageLightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            var lightbox = document.getElementById("imageLightbox");
+            var lightboxImg = document.getElementById("lightboxImg");
+            lightbox.style.display = "flex";
+            lightboxImg.src = src;
+        }
+
+        function closeLightbox() {
+            var lightbox = document.getElementById("imageLightbox");
+            lightbox.style.display = "none";
+        }
+
+        // Close on click outside
+        window.onclick = function (event) {
+            var lightbox = document.getElementById("imageLightbox");
+            if (event.target == lightbox) {
+                lightbox.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Partners -->
+    <section class="section partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naši partneri</h2>
+                <p>Brendovi i timovi sa kojima gradimo kvalitetnu priču.</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card"><div class="partner-logo">Auto Etiketa</div></div>
+                <div class="partner-card"><div class="partner-logo">Coding Garage</div></div>
+                <div class="partner-card"><div class="partner-logo">Lent.rs</div></div>
+                <div class="partner-card"><div class="partner-logo">Posteri Automobila</div></div>
+                <div class="partner-card"><div class="partner-logo">Mega Detailing</div></div>
+                <div class="partner-card"><div class="partner-logo">Ghost Sim Racing</div></div>
+                <div class="partner-card"><div class="partner-logo">Štamparija Prof Print</div></div>
+                <div class="partner-card"><div class="partner-logo">G Rateo</div></div>
             </div>
         </div>
     </section>
@@ -149,7 +317,8 @@
             <div class="footer-grid">
                 <div>
                     <h4>BGDCARS <span class="text-primary">Detailing</span></h4>
-                    <p style="margin-top: var(--spacing-xs);">Premium auto detailing studio u Beogradu. Vaš automobil u
+                    <p style="margin-top: var(--spacing-xs);" data-lang="footer_desc">Premium auto detailing studio u
+                        Beogradu. Vaš automobil u
                         sigurnim rukama.</p>
                     <div class="footer-socials">
                         <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
@@ -161,26 +330,28 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Navigacija</h4>
+                    <h4 data-lang="footer_nav">Navigacija</h4>
                     <ul class="footer-links">
-                        <li><a href="../index.html">Početna</a></li>
-                        <li><a href="about.html">O Nama</a></li>
-                        <li><a href="services.html">Usluge</a></li>
-                        <li><a href="pricing.html">Cenovnik</a></li>
-                        <li><a href="club.html">Auto Klub</a></li>
+                        <li><a href="../index.html" data-lang="nav_home">Početna</a></li>
+                        <li><a href="about.html" data-lang="nav_about">O Nama</a></li>
+                        <li><a href="services.html" data-lang="nav_services">Usluge</a></li>
+                        <li><a href="pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                        <li><a href="club.html" data-lang="nav_club">Auto Klub</a></li>
+                        <li><a href="bgdcars.html" data-lang="nav_bgdcars">BGDCARS</a></li>
+                        <li><a href="bgdcars-ads.html" data-lang="nav_bgdcars_ads">BGDCARS Ads</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Usluge</h4>
+                    <h4 data-lang="footer_services">Usluge</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Keramička Zaštita</a></li>
-                        <li><a href="services.html">Poliranje</a></li>
-                        <li><a href="services.html">Deep Wash</a></li>
+                        <li><a href="services.html" data-lang="srv_ceramic_title">Keramička Zaštita</a></li>
+                        <li><a href="services.html" data-lang="srv_polish_title">Poliranje</a></li>
+                        <li><a href="services.html" data-lang="srv_wash_title">Deep Wash</a></li>
                         <li><a href="services.html">PPF Folija</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Kontakt</h4>
+                    <h4 data-lang="footer_contact">Kontakt</h4>
                     <ul class="footer-links">
                         <li><a href="tel:+381677671862" style="color: inherit;">📞 +381 67 767 1862</a></li>
                         <li><a href="mailto:info@bgdcars.rs" style="color: inherit;">📧 bgdcars1@gmail.com</a></li>
@@ -190,11 +361,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by Djurke23.</p>
+                <p data-lang="footer_rights">&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by
+                    Djurke23.</p>
             </div>
         </div>
     </footer>
 
+    <script src="../assets/js/translations.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 
