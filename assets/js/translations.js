@@ -44,7 +44,7 @@ const translations = {
         blog_soon: "USKORO",
 
         // Hero
-        hero_subtitle: "✦ Auto Detailing Studio ✦",
+        hero_subtitle: "<i class='fas fa-star-of-life'></i> Auto Detailing Studio <i class='fas fa-star-of-life'></i>",
         hero_title: "Premium Detailing<br>u Beogradu",
         hero_desc: "Dovedite svoj automobil do savršenstva. Profesionalni detailing, keramička zaštita i poliranje za one koji traže najbolje.",
         btn_book: "Zakaži Termin",
@@ -55,16 +55,20 @@ const translations = {
         services_desc: "Nudimo kompletnu negu vašeg vozila, od osnovnog pranja do premium keramičke zaštite.",
 
         srv_ceramic_title: "Keramička Zaštita",
-        srv_ceramic_desc: "Dugotrajna zaštita laka sa hidrofobnošću do 5 godina. Premium keramički premazi.",
+        srv_ceramic_desc: "Dugotrajna zaštita laka sa hidrofobnošću do 5 godina.",
         price_from_350: "od €350",
+        price_from_120: "od €120",
 
         srv_polish_title: "Poliranje",
         srv_polish_desc: "Uklanjanje ogrebotina, swirl markova i vraćanje sjaja vašem vozilu.",
         price_from_150: "od €150",
+        price_from_130: "od €130",
 
         srv_wash_title: "Deep Wash",
         srv_wash_desc: "Dubinsko pranje enterijera i eksterijera. Dezinfekcija i osvežavanje.",
         price_from_80: "od €80",
+        price_from_100: "od €100",
+        btn_view_full_pricelist: "Vidi ceo cenovnik",
 
         // Stats
         stat_clients: "Zadovoljnih klijenata",
@@ -100,13 +104,26 @@ const translations = {
         footer_contact_email: "Email",
         footer_contact_address: "Adresa",
 
+        footer_bgd_cars_title: "BGD Cars",
+        footer_bgd_cars_desc: "Auto Klub • Spotteri • Obožavaoci",
+        footer_bgd_ads_title: "BGD Cars Ads",
+        footer_bgd_ads_desc: "Oglašavanje prodaje automobila",
+        footer_partners: "Prijatelji",
+
         // === ABOUT PAGE ===
         about_title: "O <span class='text-primary'>Nama</span>",
         about_subtitle: "Naša priča, misija i posvećenost savršenstvu",
         about_passion_title: "Strast za <span class='text-primary'>Perfekcijom</span>",
-        about_p1: "BGD Cars Detailing je premium auto detailing studio osnovan sa jednostavnom misijom - doneti svetski nivo kvaliteta u Beograd. Naš tim čine sertifikovani stručnjaci sa višegodišnjim iskustvom u auto industriji.",
-        about_p2: "Koristimo isključivo profesionalne proizvode renomiranih svetskih brendova poput Gyeon, Koch Chemie i Sonax. Svaki automobil koji uđe u naš studio tretiramo kao da je naš lični.",
-        about_p3: "Naša filozofija je jednostavna: bez kompromisa kada je u pitanju kvalitet. Od prvog kontakta do završne inspekcije, pružamo iskustvo koje vas ostavlja bez reči.",
+        about_p1: "BGD Cars su pokrenula dva drugara sa istom idejom: da od autoljubavi naprave ozbiljan brend i zajednicu. Krenuli smo od car spotovanja i sadržaja, a zatim znanje i energiju preneli u detailing studio.",
+        about_p2: "Danas zajedno radimo svaki automobil kao da je naš. Jedan fokus drži na preciznoj pripremi i korekciji, drugi na finalnoj zaštiti i završnom kvalitetu. Ta podela nam daje brzinu, ali bez kompromisa.",
+        about_p3: "Naš cilj je da svaki klijent dobije čist plan, jasan rezultat i auto koji izgleda bolje nego što je očekivao. BGD Cars Detailing gradimo kao priču na duže staze, kroz kvalitet, poverenje i zajednicu.",
+        about_timeline_title: "Naša <span class='text-primary'>Priča</span>",
+        about_timeline_subtitle: "Od ideje do studija i auto zajednice u Beogradu",
+        about_timeline_2015: "Osnivanje BGD Cars",
+        about_timeline_2023: "Osnivanje BGDCARS Detailinga",
+        about_timeline_2024: "Proširenje studija",
+        about_timeline_2025: "Pokretanje Autokluba",
+        about_timeline_2026: "500+ zadovoljnih klijenata",
 
         why_title: "Zašto <span class='text-primary'>BGD Cars?</span>",
         why_subtitle: "Evo šta nas izdvaja od konkurencije",
@@ -278,9 +295,9 @@ const translations = {
         btn_schedule: "Zakaži Termin",
 
         // === CLUB PAGE ===
-        club_hero_subtitle: "✦ EKSKLUZIVNO ČLANSTVO ✦",
+        club_hero_subtitle: "<i class='fas fa-star-of-life'></i> EKSKLUZIVNO ČLANSTVO <i class='fas fa-star-of-life'></i>",
         club_join: "POSTANI DEO",
-        club_bgd_elite: "BGD ELITE",
+        club_bgd_elite: "BGDCARS KLUBA",
         club_price_period: "/ god",
         club_description: "Pristup svetu detailinga rezervisanom samo za odabrane.",
 
@@ -374,7 +391,7 @@ const translations = {
         blog_soon: "SOON",
 
         // Hero
-        hero_subtitle: "✦ Auto Detailing Studio ✦",
+        hero_subtitle: "<i class='fas fa-star-of-life'></i> Auto Detailing Studio <i class='fas fa-star-of-life'></i>",
         hero_title: "Premium Detailing<br>in Belgrade",
         hero_desc: "Bring your car to perfection. Professional detailing, ceramic coating, and polishing for those who seek the best.",
         btn_book: "Book Appointment",
@@ -385,16 +402,20 @@ const translations = {
         services_desc: "We offer complete care for your vehicle, from basic washing to premium ceramic protection.",
 
         srv_ceramic_title: "Ceramic Coating",
-        srv_ceramic_desc: "Long-lasting paint protection with hydrophobicity up to 5 years. Premium ceramic coatings.",
+        srv_ceramic_desc: "Long-lasting paint protection with hydrophobicity up to 5 years.",
         price_from_350: "from €350",
+        price_from_120: "from €120",
 
         srv_polish_title: "Polishing",
         srv_polish_desc: "Removal of scratches, swirl marks, and restoring shine to your vehicle.",
         price_from_150: "from €150",
+        price_from_130: "from €130",
 
         srv_wash_title: "Deep Wash",
         srv_wash_desc: "Deep cleaning of interior and exterior. Disinfection and refreshing.",
         price_from_80: "from €80",
+        price_from_100: "from €100",
+        btn_view_full_pricelist: "See full price list",
 
         // Stats
         stat_clients: "Satisfied Clients",
@@ -430,13 +451,26 @@ const translations = {
         footer_contact_email: "Email",
         footer_contact_address: "Address",
 
+        footer_bgd_cars_title: "BGD Cars",
+        footer_bgd_cars_desc: "Auto Club • Spotters • Enthusiasts",
+        footer_bgd_ads_title: "BGD Cars Ads",
+        footer_bgd_ads_desc: "Car Sales Advertising",
+        footer_partners: "Partners",
+
         // === ABOUT PAGE ===
         about_title: "About <span class='text-primary'>Us</span>",
         about_subtitle: "Our story, mission, and dedication to perfection",
         about_passion_title: "Passion for <span class='text-primary'>Perfection</span>",
-        about_p1: "BGD Cars Detailing is a premium auto detailing studio founded with a simple mission - to bring world-class quality to Belgrade. Our team consists of certified experts with years of experience in the auto industry.",
-        about_p2: "We use exclusively professional products from renowned world brands like Gyeon, Koch Chemie, and Sonax. Every car that enters our studio is treated as if it were our own.",
-        about_p3: "Our philosophy is simple: no compromises when it comes to quality. From the first contact to the final inspection, we provide an experience that leaves you speechless.",
+        about_p1: "BGD Cars was started by two friends with one idea: turn love for cars into a serious brand and community. We began with car spotting and content, then brought that energy into a professional detailing studio.",
+        about_p2: "Today we work on every vehicle as if it were our own. One of us focuses on precise prep and paint correction, while the other leads final protection and finish quality. That split gives us speed without compromise.",
+        about_p3: "Our goal is simple: every client gets a clear plan, a visible result, and a car that looks better than expected. We are building BGD Cars Detailing for the long run through quality, trust, and community.",
+        about_timeline_title: "Our <span class='text-primary'>Story</span>",
+        about_timeline_subtitle: "From idea to studio and car community in Belgrade",
+        about_timeline_2015: "BGD Cars founded",
+        about_timeline_2023: "BGDCARS Detailing founded",
+        about_timeline_2024: "Studio expansion",
+        about_timeline_2025: "Auto Club launched",
+        about_timeline_2026: "500+ satisfied clients",
 
         why_title: "Why <span class='text-primary'>BGD Cars?</span>",
         why_subtitle: "Here's what sets us apart from the competition",
@@ -608,9 +642,9 @@ const translations = {
         btn_schedule: "Book Appointment",
 
         // === CLUB PAGE ===
-        club_hero_subtitle: "✦ EXCLUSIVE MEMBERSHIP ✦",
+        club_hero_subtitle: "<i class='fas fa-star-of-life'></i> EXCLUSIVE MEMBERSHIP <i class='fas fa-star-of-life'></i>",
         club_join: "JOIN THE",
-        club_bgd_elite: "BGD ELITE",
+        club_bgd_elite: "BGDCARS CLUB",
         club_price_period: "/ year",
         club_description: "Access to the detailing world reserved only for the chosen ones.",
 

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navbarToggle.addEventListener('click', function () {
             navbarToggle.classList.toggle('active');
             navbarNav.classList.toggle('active');
+            navbar.classList.toggle('menu-open');
 
             // Prevent body scroll when menu is open
             document.body.style.overflow = navbarNav.classList.contains('active') ? 'hidden' : '';
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link.addEventListener('click', function () {
                 navbarToggle.classList.remove('active');
                 navbarNav.classList.remove('active');
+                navbar.classList.remove('menu-open');
                 document.body.style.overflow = '';
             });
         });
@@ -34,9 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!navbarNav.contains(e.target) && !navbarToggle.contains(e.target)) {
                 navbarToggle.classList.remove('active');
                 navbarNav.classList.remove('active');
+                navbar.classList.remove('menu-open');
                 document.body.style.overflow = '';
             }
         });
+
     }
 
     // ===== Navbar Scroll Effect =====
@@ -358,6 +362,21 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(statsSection);
     }
 
+    // ===== About Timeline Animation =====
+    const timelineItems = document.querySelectorAll('.about-timeline-item');
+    if (timelineItems.length) {
+        const timelineObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+
+        timelineItems.forEach(item => timelineObserver.observe(item));
+    }
+
     // ===== Language Switcher =====
     // ===== Language Switcher (Dropdown) =====
     const langItems = document.querySelectorAll('.lang-item');
@@ -424,3 +443,117 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+// ===== Testimonials Slider =====
+const testimonialTrack = document.querySelector('.testimonials-track');
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+if (testimonialTrack && testimonialCards.length > 0) {
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    const getCardsPerView = () => {
+        if (window.innerWidth > 992) return 3;
+        if (window.innerWidth > 768) return 2;
+        return 1;
+    };
+
+    const updateSlider = () => {
+        const cardsPerView = getCardsPerView();
+        // Just for safety if resizing happens
+        const stride = testimonialCards[1].offsetLeft - testimonialCards[0].offsetLeft;
+        const maxIndex = testimonialCards.length - cardsPerView;
+
+        // Loop Logic:
+        if (currentIndex > maxIndex) {
+            currentIndex = 0; // Reset to start
+        }
+        if (currentIndex < 0) {
+            currentIndex = maxIndex; // Loop to end
+        }
+
+        const translateX = -(currentIndex * stride);
+        testimonialTrack.style.transform = `translateX(${translateX}px)`;
+
+        // Allow looping, so don't disable buttons
+        prevBtn.style.opacity = '1';
+        prevBtn.style.pointerEvents = 'auto';
+        nextBtn.style.opacity = '1';
+        nextBtn.style.pointerEvents = 'auto';
+    };
+
+    const nextSlide = () => {
+        currentIndex++;
+        updateSlider();
+    };
+
+    const prevSlide = () => {
+        currentIndex--;
+        updateSlider();
+    };
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+    });
+
+    // Auto Play Logic
+    const startAutoPlay = () => {
+        autoPlayInterval = setInterval(nextSlide, 4000); // 4 seconds
+    };
+
+    const stopAutoPlay = () => {
+        clearInterval(autoPlayInterval);
+    };
+
+    const resetAutoPlay = () => {
+        stopAutoPlay();
+        startAutoPlay();
+    };
+
+    // Pause on Hover
+    testimonialTrack.parentElement.addEventListener('mouseenter', stopAutoPlay);
+    testimonialTrack.parentElement.addEventListener('mouseleave', startAutoPlay);
+
+    // Initialize
+    window.addEventListener('resize', () => {
+        currentIndex = 0;
+        updateSlider();
+    });
+
+    // Wait for layout to stabilize
+    setTimeout(() => {
+        updateSlider();
+        startAutoPlay();
+    }, 100);
+}
+
+/* ===== Back to Top Logic ===== */
+(function () {
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            if (scrollTop > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+})();
