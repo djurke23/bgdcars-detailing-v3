@@ -72,7 +72,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-subtitle" data-lang="hero_subtitle">✦ Auto Detailing Studio ✦</span>
+            <span class="hero-subtitle" data-lang="hero_subtitle"><i class="fas fa-star-of-life"></i> Auto Detailing Studio <i class="fas fa-star-of-life"></i></span>
             <h1 data-lang="hero_title">Premium Detailing<br>in Belgrade</h1>
             <p data-lang="hero_desc">Dovedite svoj automobil do savršenstva. Profesionalni detailing, keramička zaštita
                 i poliranje za one
@@ -94,32 +94,35 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🔮</div>
+                    <div class="service-icon"><i class="fa-solid fa-shield-halved text-light"></i></div>
                     <h3 data-lang="srv_ceramic_title">Keramička Zaštita</h3>
-                    <p data-lang="srv_ceramic_desc">Dugotrajna zaštita laka sa hidrofobnošću do 5 godina. Premium
-                        keramički premazi.</p>
-                    <span class="price" data-lang="price_from_350">od €350</span>
+                    <p data-lang="srv_ceramic_desc">Dugotrajna zaštita laka sa hidrofobnošću do 5 godina.</p>
+                    <span class="price" data-lang="price_from_120">od €120</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">✨</div>
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles text-light"></i></div>
                     <h3 data-lang="srv_polish_title">Poliranje</h3>
                     <p data-lang="srv_polish_desc">Uklanjanje ogrebotina, swirl markova i vraćanje sjaja vašem vozilu.
                     </p>
-                    <span class="price" data-lang="price_from_150">od €150</span>
+                    <span class="price" data-lang="price_from_130">od €130</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💎</div>
+                    <div class="service-icon"><i class="fa-solid fa-soap text-light"></i></div>
                     <h3 data-lang="srv_wash_title">Deep Wash</h3>
                     <p data-lang="srv_wash_desc">Dubinsko pranje enterijera i eksterijera. Dezinfekcija i osvežavanje.
                     </p>
-                    <span class="price" data-lang="price_from_80">od €80</span>
+                    <span class="price" data-lang="price_from_100">od €100</span>
                 </div>
+            </div>
+            <div class="services-pricing-actions">
+                <a href="pages/pricing.html" class="btn btn-outline" data-lang="btn_view_full_pricelist">Vidi ceo
+                    cenovnik</a>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="section" style="background: var(--bg-card);">
+    <section class="section section-compact" style="background: var(--bg-card);">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
@@ -144,29 +147,99 @@
             <div class="section-header">
                 <h2 data-lang="testimonials_title">Šta Kažu <span class="text-primary">Klijenti</span></h2>
                 <p data-lang="testimonials_subtitle">Vaše zadovoljstvo je naša najbolja preporuka.</p>
+                <a href="https://maps.app.goo.gl/ESJ5n1ZQwJmyLwEj9" target="_blank" class="google-reviews-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
+                        class="google-logo">
+                    <div class="google-rating">
+                        <span class="rating-score">5.0</span>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="review-count">Pogledajte sve recenzije</span>
+                </a>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote" data-lang="quote_1">"Neverovatna usluga! Moj Audi izgleda bolje nego
-                        kad je izašao iz
-                        salona. Keramička zaštita je pun pogodak."</p>
-                    <span class="testimonial-author">Marko - Audi A6</span>
+            <div class="testimonials-slider-wrapper">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="testimonials-track-container">
+                    <div class="testimonials-track">
+                        <!-- Card 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-quote" data-lang="quote_1">"Neverovatna usluga! Moj Audi izgleda bolje
+                                nego kad je izašao iz salona. Keramička zaštita je pun pogodak."</p>
+                            <span class="testimonial-author">Marko - Audi A6</span>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-quote" data-lang="quote_2">"Profesionalizam na vrhunskom nivou. Momci
+                                su detaljni i pedantni. Sve preporuke za dubinsko pranje."</p>
+                            <span class="testimonial-author">Jelena - BMW X5</span>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-quote" data-lang="quote_3">"Poliranje je vratilo sjaj mom deset godina
+                                starom autu. Nisam mogao da verujem rezultatima. Hvala vam!"</p>
+                            <span class="testimonial-author">Nikola - Porsche 911</span>
+                        </div>
+
+                        <!-- Card 4 (New) -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-quote">"Odlično iskustvo sa BGD Cars Detailingom. Folija je savršeno
+                                postavljena, bez ijednog mehurića. Vraćam se sigurno!"</p>
+                            <span class="testimonial-author">Stefan - Mercedes C Class</span>
+                        </div>
+
+                        <!-- Card 5 (New) -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-quote">"Dubinsko pranje je izvuklo fleke za koje sam mislila da su
+                                večne. Auto miriše kao nov. Prezadovoljna sam uslugom."</p>
+                            <span class="testimonial-author">Ana - VW Golf 7</span>
+                        </div>
+
+                        <!-- Card 6 (New) -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                                    class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-quote">"Svaka čast na trudu i posvećenosti. Vidi se da vole svoj
+                                posao. Moj auto nikad nije izgledao bolje."</p>
+                            <span class="testimonial-author">Darko - Toyota RAV4</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote" data-lang="quote_2">"Profesionalizam na vrhunskom nivou. Momci su
-                        detaljni i pedantni. Sve
-                        preporuke za dubinsko pranje."</p>
-                    <span class="testimonial-author">Jelena - BMW X5</span>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote" data-lang="quote_3">"Poliranje je vratilo sjaj mom deset godina starom
-                        autu. Nisam mogao da
-                        verujem rezultatima. Hvala vam!"</p>
-                    <span class="testimonial-author">Nikola - Porsche 911</span>
-                </div>
+
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
@@ -192,7 +265,79 @@
                         <span class="before-label" data-lang="before_label">Pre</span>
                         <span class="after-label" data-lang="after_label">Posle</span>
                     </div>
-                    <input class="before-after-range" type="range" min="0" max="100" value="50" aria-label="Before and after slider">
+                    <input class="before-after-range" type="range" min="0" max="100" value="50"
+                        aria-label="Before and after slider">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Imported from Services) -->
+    <section class="section">
+        <div class="container faq-container">
+            <div class="section-header">
+                <h2 data-lang="faq_title">Često Postavljana <span class="text-primary">Pitanja</span></h2>
+                <p data-lang="faq_subtitle">Odgovori na najčešća pitanja o našim uslugama</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-lang="faq_1_q">Koliko traje proces keramičke zaštite?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-lang="faq_1_a">Proces keramičke zaštite obično traje između 2 i 3 dana. Prvi dan se radi
+                        detaljno pranje,
+                        dekontaminacija i poliranje (priprema podloge). Drugi dan se nanosi keramika koja mora da
+                        odstoji (kuring proces). Treći dan se radi finalna inspekcija i vozilo je spremno za
+                        preuzimanje.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-lang="faq_2_q">Da li dajete garanciju na poliranje?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-lang="faq_2_a">Da, dajemo garanciju na naš rad. Međutim, trajnost rezultata poliranja zavisi
+                        od toga kako
+                        održavate vozilo nakon tretmana. Ako perete auto na četkama ili sunđerom punim peska, ogrebotine
+                        će se vratiti. Uz našu edukaciju o održavanju, rezultati mogu trajati godinama.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-lang="faq_3_q">Koja je razlika između voska i keramike?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-lang="faq_3_a">Vosak je organska zaštita koja traje 3-6 meseci i pruža topao sjaj, ali se
+                        lako skida
+                        hemikalijama. Keramika (SiO2) je hemijska veza sa lakom koja je mnogo tvrđa, otpornija na
+                        hemikalije, UV zračenje i ogrebotine, i traje od 2 do 5 godina. Takođe, keramika ima mnogo bolja
+                        hidrofobna svojstva (odbijanje vode).</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-lang="faq_4_q">Da li radite dubinsko pranje motora?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-lang="faq_4_a">Da, radimo detaljno čišćenje motornog prostora (Engine Bay Detailing).
+                        Koristimo specijalne
+                        četkice, paročistače i sredstva bezbedna za plastiku i gumu. Osetljivu elektroniku zaštićujemo
+                        pre pranja. Na kraju sve plastike tretiramo dresingom za novi izgled.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-lang="faq_5_q">Kako da zakažem termin?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-lang="faq_5_a">Termin možete zakazati pozivom na naš broj telefona, slanjem email-a ili
+                        popunjavanjem forme na
+                        stranici Kontakt. Preporučujemo zakazivanje 5-7 dana unapred.</p>
                 </div>
             </div>
         </div>
@@ -201,7 +346,8 @@
     <!-- CTA Section -->
     <section class="section">
         <div class="container text-center">
-            <h2 data-lang="cta_title">Spremni da Transformišete <span class="text-primary">Vaš Automobil?</span></h2>
+            <h2 data-lang="cta_title">Spremni da Transformišete <span class="text-primary">Vaš Automobil?</span>
+            </h2>
             <p style="max-width: 600px; margin: var(--spacing-sm) auto var(--spacing-md);" data-lang="cta_desc">
                 Kontaktirajte nas danas i
                 zakažite termin. Vaš automobil zaslužuje najbolje.</p>
@@ -209,83 +355,114 @@
         </div>
     </section>
 
-    <!-- Partners -->
-    <section class="section partners">
-        <div class="container">
-            <div class="section-header">
-                <h2>Naši partneri</h2>
-                <p>Brendovi i timovi sa kojima gradimo kvalitetnu priču.</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partner-card"><div class="partner-logo">Auto Etiketa</div></div>
-                <div class="partner-card"><div class="partner-logo">Coding Garage</div></div>
-                <div class="partner-card"><div class="partner-logo">Lent.rs</div></div>
-                <div class="partner-card"><div class="partner-logo">Posteri Automobila</div></div>
-                <div class="partner-card"><div class="partner-logo">Mega Detailing</div></div>
-                <div class="partner-card"><div class="partner-logo">Ghost Sim Racing</div></div>
-                <div class="partner-card"><div class="partner-logo">Štamparija Prof Print</div></div>
-                <div class="partner-card"><div class="partner-logo">G Rateo</div></div>
-            </div>
-        </div>
-    </section>
+        <!-- Partners -->
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h4>BGDCARS <span class="text-primary">Detailing</span></h4>
-                    <p style="margin-top: var(--spacing-xs);" data-lang="footer_desc">Premium auto detailing studio u
-                        Beogradu. Vaš automobil u
-                        sigurnim rukama.</p>
-                    <div class="footer-socials">
-                        <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
-                                class="fab fa-instagram footer-social-icon"></i></a>
-                        <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
-                                class="fab fa-tiktok footer-social-icon"></i></a>
-                        <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
-                                class="fab fa-youtube footer-social-icon"></i></a>
+        <!-- Footer -->
+        <footer class="footer footer-no-top-gap">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <h4>BGDCARS <span class="text-primary">Detailing</span></h4>
+                        <p style="margin-top: var(--spacing-xs); margin-bottom: 2rem;" data-lang="footer_desc">Premium
+                            auto
+                            detailing studio u
+                            Beogradu. Vaš automobil u
+                            sigurnim rukama.</p>
+
+                        <!-- BGD Cars Info -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 class="text-primary" style="margin-bottom: 0.5rem;" data-lang="footer_bgd_cars_title">
+                                BGD
+                                Cars</h5>
+                            <p style="font-size: 0.9rem; color: var(--text-dim);" data-lang="footer_bgd_cars_desc">Auto
+                                Klub
+                                • Spotteri • Obožavaoci</p>
+                        </div>
+
+                        <!-- BGD Cars Ads Info -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 class="text-primary" style="margin-bottom: 0.5rem;" data-lang="footer_bgd_ads_title">BGD
+                                Cars Ads</h5>
+                            <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 0.25rem;"
+                                data-lang="footer_bgd_ads_desc">Oglašavanje prodaje automobila</p>
+                            <a href="https://instagram.com/bgdcarsads" target="_blank"
+                                style="color: var(--text-light); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;"
+                                onmouseover="this.style.color='var(--primary)'"
+                                onmouseout="this.style.color='var(--text-light)'">
+                                <i class="fab fa-instagram"></i> @bgdcarsads
+                            </a>
+                        </div>
+
+                        <div class="footer-socials">
+                            <a href="https://www.instagram.com/bgdcarsdetailing/" target="_blank"><i
+                                    class="fab fa-instagram footer-social-icon"></i></a>
+                            <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
+                                    class="fab fa-tiktok footer-social-icon"></i></a>
+                            <a href="https://www.tiktok.com/@bgdcarsdetailing" target="_blank"><i
+                                    class="fab fa-youtube footer-social-icon"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 data-lang="footer_nav">Navigacija</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html" data-lang="nav_home">Početna</a></li>
+                            <li><a href="pages/about.html" data-lang="nav_about">O Nama</a></li>
+                            <li><a href="pages/services.html" data-lang="nav_services">Usluge</a></li>
+                            <li><a href="pages/pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
+                            <li><a href="pages/club.html" data-lang="nav_club">Auto Klub</a></li>
+                            <li><a href="pages/bgdcars.html" data-lang="nav_bgdcars">BGDCARS</a></li>
+                            <li><a href="pages/bgdcars-ads.html" data-lang="nav_bgdcars_ads">BGDCARS Ads</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 data-lang="footer_services">Usluge</h4>
+                        <ul class="footer-links">
+                            <li><a href="pages/services.html" data-lang="srv_ceramic_title">Keramička Zaštita</a></li>
+                            <li><a href="pages/services.html" data-lang="srv_polish_title">Poliranje</a></li>
+                            <li><a href="pages/services.html" data-lang="srv_wash_title">Deep Wash</a></li>
+                            <li><a href="pages/services.html">PPF Folija</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 data-lang="footer_contact">Kontakt</h4>
+                        <ul class="footer-links">
+                            <li><a href="tel:+381677671862" style="color: inherit;"><i class="fa-solid fa-phone"></i> +381 67 767 1862</a></li>
+                            <li><a href="mailto:info@bgdcars.rs" style="color: inherit;"><i class="fa-solid fa-envelope"></i> bgdcars1@gmail.com</a></li>
+                            <li><a href="https://maps.google.com/?q=Branka+Radičevića+13,+Beograd" target="_blank"
+                                    style="color: inherit;"><i class="fa-solid fa-location-dot"></i> Branka Radičevića 13, Bgd</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div>
-                    <h4 data-lang="footer_nav">Navigacija</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html" data-lang="nav_home">Početna</a></li>
-                        <li><a href="pages/about.html" data-lang="nav_about">O Nama</a></li>
-                        <li><a href="pages/services.html" data-lang="nav_services">Usluge</a></li>
-                        <li><a href="pages/pricing.html" data-lang="nav_pricing">Cenovnik</a></li>
-                        <li><a href="pages/club.html" data-lang="nav_club">Auto Klub</a></li>
-                        <li><a href="pages/bgdcars.html" data-lang="nav_bgdcars">BGDCARS</a></li>
-                        <li><a href="pages/bgdcars-ads.html" data-lang="nav_bgdcars_ads">BGDCARS Ads</a></li>
-                    </ul>
+
+                <!-- Partners Section -->
+                <div class="footer-partners">
+                    <h4 class="text-center"
+                        style="margin-bottom: 1.5rem; font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2em;"
+                        data-lang="footer_partners">Prijatelji</h4>
+                    <div class="partners-grid">
+                        <a href="https://www.instagram.com/posteri_automobila/" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/posteriautomobila.jpg" alt="Posteri Automobila" class="partner-logo"></a>
+                        <a href="https://autoetiketa.com" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/autoetiketa.png.avif" alt="Auto Etiketa" class="partner-logo"></a>
+                        <a href="https://www.lent.rs" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/lent.jpg" alt="Lent.rs" class="partner-logo"></a>
+                        <a href="https://omegadetailing.rs" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/OmegaDetailing.png.avif" alt="Omega Detailing" class="partner-logo"></a>
+                        <a href="https://www.lent.rs/work/g-rated" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/grated.jpg" alt="G Rated" class="partner-logo"></a>
+                        <a href="https://www.profiprint011.com" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/profiprint.png" alt="ProfiPrint" class="partner-logo"></a>
+                        <a href="https://www.instagram.com/ghost.simracing/" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/ghostsimracing.jpg" alt="Ghost Sim Racing" class="partner-logo"></a>
+                        <a href="https://coding-garage.rs/" target="_blank" rel="noopener noreferrer"><img src="assets/img/partners/codinggarage.png" alt="Coding Garage" class="partner-logo"></a>
+                    </div>
                 </div>
-                <div>
-                    <h4 data-lang="footer_services">Usluge</h4>
-                    <ul class="footer-links">
-                        <li><a href="pages/services.html" data-lang="srv_ceramic_title">Keramička Zaštita</a></li>
-                        <li><a href="pages/services.html" data-lang="srv_polish_title">Poliranje</a></li>
-                        <li><a href="pages/services.html" data-lang="srv_wash_title">Deep Wash</a></li>
-                        <li><a href="pages/services.html">PPF Folija</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 data-lang="footer_contact">Kontakt</h4>
-                    <ul class="footer-links">
-                        <li><a href="tel:+381677671862" style="color: inherit;">📞 +381 67 767 1862</a></li>
-                        <li><a href="mailto:info@bgdcars.rs" style="color: inherit;">📧 bgdcars1@gmail.com</a></li>
-                        <li><a href="https://maps.google.com/?q=Branka+Radičevića+13,+Beograd" target="_blank"
-                                style="color: inherit;">📍 Branka Radičevića 13, Bgd</a></li>
-                    </ul>
+
+                <div class="footer-bottom">
+                    <p data-lang="footer_rights">&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by <a href="https://djurke23.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Djurke23</a>.</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p data-lang="footer_rights">&copy;Copyright 2026 BGDCARS DETAILING Sva prava zadržana | Made by
-                    Djurke23.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
     <script src="assets/js/translations.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="assets/js/main.js"></script>
 </body>
 
