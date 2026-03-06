@@ -449,7 +449,7 @@ const testimonialCards = document.querySelectorAll('.testimonial-card');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
-if (testimonialTrack && testimonialCards.length > 0) {
+if (testimonialTrack && testimonialCards.length > 1 && prevBtn && nextBtn) {
     let currentIndex = 0;
     let autoPlayInterval;
 
@@ -534,26 +534,87 @@ if (testimonialTrack && testimonialCards.length > 0) {
     }, 100);
 }
 
-/* ===== Back to Top Logic ===== */
-(function () {
-    const backToTopBtn = document.getElementById('backToTop');
+/* ===== Floating Actions ===== */
+document.addEventListener('DOMContentLoaded', function () {
+    const whatsappHref = 'https://wa.me/381677671862?text=Zdravo,%20zelim%20da%20zakazem%20termin%20za%20detailing.';
+    const oldBackToTop = document.getElementById('backToTop');
 
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            if (scrollTop > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    if (oldBackToTop) {
+        oldBackToTop.remove();
     }
-})();
+
+    let floatingActions = document.getElementById('floatingActions');
+    if (!floatingActions) {
+        floatingActions = document.createElement('div');
+        floatingActions.id = 'floatingActions';
+        floatingActions.className = 'floating-actions';
+        floatingActions.innerHTML = `
+            <a
+                href="${whatsappHref}"
+                id="floatingWhatsApp"
+                class="floating-action floating-action-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp zakazivanje"
+            >
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <button
+                type="button"
+                id="scrollToTopBtn"
+                class="floating-action floating-action-top"
+                aria-label="Nazad na vrh"
+            >
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </button>
+        `;
+        document.body.appendChild(floatingActions);
+    }
+
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (!scrollToTopBtn) return;
+
+    const toggleScrollToTop = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        scrollToTopBtn.classList.toggle('is-visible', scrollTop > 280);
+    };
+
+    toggleScrollToTop();
+    window.addEventListener('scroll', toggleScrollToTop, { passive: true });
+
+    scrollToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+/* ===== Mobile Services Toggle ===== */
+document.addEventListener('DOMContentLoaded', function () {
+    const servicesGrid = document.getElementById('primaryServicesGrid');
+    const toggleServicesBtn = document.getElementById('toggleServicesBtn');
+
+    if (!servicesGrid || !toggleServicesBtn) return;
+
+    const syncServicesToggle = () => {
+        if (window.innerWidth > 768) {
+            servicesGrid.classList.remove('is-expanded');
+            toggleServicesBtn.textContent = 'Sve usluge';
+            return;
+        }
+
+        toggleServicesBtn.textContent = servicesGrid.classList.contains('is-expanded')
+            ? 'Prikaži manje'
+            : 'Sve usluge';
+    };
+
+    toggleServicesBtn.addEventListener('click', function () {
+        if (window.innerWidth > 768) return;
+        servicesGrid.classList.toggle('is-expanded');
+        syncServicesToggle();
+    });
+
+    window.addEventListener('resize', syncServicesToggle);
+    syncServicesToggle();
+});

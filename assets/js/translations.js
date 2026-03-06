@@ -25,19 +25,19 @@ const translations = {
         blog_tag_announcement: "Najava",
         blog_tag_human: "Humanitarno",
 
-        blog_post_rc1_title: "Rev & Chill #1",
-        blog_post_rc1_desc: "Pogledajte kako je bilo na našem prvom velikom okupljanju.",
-        blog_post_rc2_title: "Rev & Chill #2",
-        blog_post_rc2_desc: "Još više automobila, još bolja atmosfera na drugom skupu.",
-        blog_post_rc3_title: "Rev & Chill #3",
-        blog_post_rc3_desc: "Pripremamo nešto spektakularno. Pratite nas za više informacija.",
+        blog_post_rc1_title: "Gde pronaći dobar auto meet bez prazne priče i loše organizacije?",
+        blog_post_rc1_desc: "Kako smo napravili okupljanje sa ozbiljnim automobilima, dobrom energijom i ekipom zbog koje želite da dođete opet.",
+        blog_post_rc2_title: "Kako izgleda auto skup na koji ljudi stvarno žele da se vrate?",
+        blog_post_rc2_desc: "Drugi Rev & Chill je pokazao šta se dobija kada spojite dobru selekciju automobila, kvalitetan sadržaj i ozbiljnu organizaciju.",
+        blog_post_rc3_title: "Šta spremamo za sledeći meet da vredi da odvojite vreme?",
+        blog_post_rc3_desc: "Pripremamo sledeći događaj sa još boljom postavkom, više sadržaja i razlogom da dođete ranije i ostanete duže.",
 
-        blog_post_mina_title: "Za Minu",
-        blog_post_mina_desc: "Veliki humanitarni skup za pomoć našoj Mini.",
-        blog_post_djordje_title: "Za Đorđa",
-        blog_post_djordje_desc: "Okupljanje ljubitelja automobila sa ciljem prikupljanja sredstava za Đorđa.",
-        blog_post_mila_title: "Za Milu",
-        blog_post_mila_desc: "Humanitarna akcija i vožnja za malu Milu.",
+        blog_post_mina_title: "Kako auto zajednica može stvarno da pomogne kada je najvažnije?",
+        blog_post_mina_desc: "Veliki humanitarni skup za Minu pokazao je koliko brzo dobra ekipa može da se organizuje kada postoji pravi razlog.",
+        blog_post_djordje_title: "Šta se desi kada ljubav prema automobilima dobije veći smisao?",
+        blog_post_djordje_desc: "Okupljanje za Đorđa spojilo je ozbiljnu auto priču i konkretan cilj, uz podršku ljudi koji se odazivaju kad je važno.",
+        blog_post_mila_title: "Kako jedna vožnja može da okupi ljude oko prave stvari?",
+        blog_post_mila_desc: "Humanitarna vožnja za Milu pokazala je da dobra organizacija i jaka zajednica mogu da naprave stvarnu razliku.",
 
         btn_read_more: "Pročitaj Više",
         btn_coming_soon: "Uskoro",
@@ -65,7 +65,7 @@ const translations = {
         price_from_130: "od €130",
 
         srv_wash_title: "Deep Wash",
-        srv_wash_desc: "Dubinsko pranje enterijera i eksterijera. Dezinfekcija i osvežavanje.",
+        srv_wash_desc: "Temeljno pranje za vozila koja traže ozbiljno osveženje enterijera i eksterijera.",
         price_from_80: "od €80",
         price_from_100: "od €100",
         btn_view_full_pricelist: "Vidi ceo cenovnik",
@@ -329,7 +329,7 @@ const translations = {
         // === CONTACT PAGE ===
         contact_title: "Kontakt",
         contact_subtitle: "Javite nam se i zakažite termin",
-        contact_form_title: "Pošaljite Upit",
+        contact_form_title: "Zatraži Ponudu",
 
         label_name: "Ime i Prezime *",
         placeholder_name: "Vaše ime",
@@ -338,14 +338,14 @@ const translations = {
         label_car_model: "Model Automobila",
         placeholder_car_model: "npr. BMW M4 2023",
         label_service: "Usluga",
-        option_select_service: "Izaberite uslugu",
+        option_select_service: "Nisam siguran, treba mi preporuka",
         option_other: "Ostalo",
         label_message: "Poruka",
         placeholder_message: "Opišite šta vam je potrebno...",
-        btn_send: "Pošalji Upit",
+        btn_send: "Zatraži Ponudu",
 
-        contact_working_hours: "Radno Vreme",
-        working_hours_time: "Pon - Pet: 09:00 - 18:00<br>Sub: 09:00 - 14:00"
+        contact_working_hours: "Radno Vreme / Zakazivanje",
+        working_hours_time: "Radno vreme i preuzimanje termina po dogovoru.<br>Javite se pozivom, porukom ili kroz formu."
     },
     en: {
         // Navbar
@@ -372,19 +372,19 @@ const translations = {
         blog_tag_announcement: "Announcement",
         blog_tag_human: "Charity",
 
-        blog_post_rc1_title: "Rev & Chill #1",
-        blog_post_rc1_desc: "Check out how it was at our first big gathering.",
-        blog_post_rc2_title: "Rev & Chill #2",
-        blog_post_rc2_desc: "Even more cars, even better atmosphere at the second meet.",
-        blog_post_rc3_title: "Rev & Chill #3",
-        blog_post_rc3_desc: "We are preparing something spectacular. Follow us for more info.",
+        blog_post_rc1_title: "Where can you find a proper car meet without weak organization?",
+        blog_post_rc1_desc: "How we built a gathering with serious cars, a strong vibe, and a crowd that actually wants to come back.",
+        blog_post_rc2_title: "What does a car meet look like when people genuinely want to return?",
+        blog_post_rc2_desc: "Our second Rev & Chill showed what happens when strong car selection, quality content, and solid organization come together.",
+        blog_post_rc3_title: "What are we preparing for the next meet that makes it worth your time?",
+        blog_post_rc3_desc: "The next event is being built with a sharper setup, more content, and more reasons to come early and stay longer.",
 
-        blog_post_mina_title: "For Mina",
-        blog_post_mina_desc: "Big charity meet to help our Mina.",
-        blog_post_djordje_title: "For Djordje",
-        blog_post_djordje_desc: "Gathering of car enthusiasts to raise funds for Djordje.",
-        blog_post_mila_title: "For Mila",
-        blog_post_mila_desc: "Charity action and drive for little Mila.",
+        blog_post_mina_title: "How can a car community truly help when it matters most?",
+        blog_post_mina_desc: "Our charity meet for Mina showed how quickly a strong community can organize around a meaningful cause.",
+        blog_post_djordje_title: "What happens when car culture gets a bigger purpose?",
+        blog_post_djordje_desc: "The event for Djordje combined a serious automotive crowd with a clear goal and real support.",
+        blog_post_mila_title: "How can one drive bring people together for the right reason?",
+        blog_post_mila_desc: "The charity drive for Mila showed how good organization and a strong community can create real impact.",
 
         btn_read_more: "Read More",
         btn_coming_soon: "Coming Soon",
@@ -412,7 +412,7 @@ const translations = {
         price_from_130: "from €130",
 
         srv_wash_title: "Deep Wash",
-        srv_wash_desc: "Deep cleaning of interior and exterior. Disinfection and refreshing.",
+        srv_wash_desc: "A thorough cleaning for vehicles that need a serious interior and exterior refresh.",
         price_from_80: "from €80",
         price_from_100: "from €100",
         btn_view_full_pricelist: "See full price list",
@@ -676,7 +676,7 @@ const translations = {
         // === CONTACT PAGE ===
         contact_title: "Contact",
         contact_subtitle: "Get in touch and book an appointment",
-        contact_form_title: "Send Inquiry",
+        contact_form_title: "Request an Offer",
 
         label_name: "Full Name *",
         placeholder_name: "Your Name",
@@ -685,13 +685,13 @@ const translations = {
         label_car_model: "Car Model",
         placeholder_car_model: "e.g. BMW M4 2023",
         label_service: "Service",
-        option_select_service: "Select Service",
+        option_select_service: "I'm not sure, I need a recommendation",
         option_other: "Other",
         label_message: "Message",
         placeholder_message: "Describe what you need...",
-        btn_send: "Send Inquiry",
+        btn_send: "Request an Offer",
 
-        contact_working_hours: "Working Hours",
-        working_hours_time: "Mon - Fri: 09:00 - 18:00<br>Sat: 09:00 - 14:00"
+        contact_working_hours: "Working Hours / Booking",
+        working_hours_time: "Working hours and appointments are arranged by agreement.<br>Reach out by phone, message, or form."
     }
 };
