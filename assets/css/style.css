@@ -2061,7 +2061,51 @@ p {
 
     .navbar-toggle {
         display: flex;
-        z-index: 1001;
+        position: fixed;
+        top: 18px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        background: rgba(15, 15, 15, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(10px);
+        z-index: 1105;
+    }
+
+    .navbar-toggle span {
+        position: absolute;
+        width: 22px;
+        height: 2.5px;
+        background: var(--text-light);
+    }
+
+    .navbar-toggle span:nth-child(1) {
+        transform: translateY(-7px);
+    }
+
+    .navbar-toggle span:nth-child(2) {
+        transform: translateY(0);
+    }
+
+    .navbar-toggle span:nth-child(3) {
+        transform: translateY(7px);
+    }
+
+    .navbar-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
     }
 }
 
@@ -2150,7 +2194,54 @@ p {
 
     .navbar-toggle {
         display: flex;
-        z-index: 1001;
+        position: fixed;
+        top: 14px;
+        right: 12px;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        background: rgba(15, 15, 15, 0.94);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(10px);
+        z-index: 1105;
+    }
+
+    .navbar-toggle span {
+        position: absolute;
+        width: 21px;
+        height: 2.5px;
+    }
+
+    .navbar-toggle span:nth-child(1) {
+        transform: translateY(-7px);
+    }
+
+    .navbar-toggle span:nth-child(2) {
+        transform: translateY(0);
+    }
+
+    .navbar-toggle span:nth-child(3) {
+        transform: translateY(7px);
+    }
+
+    .navbar-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .navbar .container {
+        padding-right: 70px;
     }
 
     .footer-grid {
